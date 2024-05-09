@@ -1,0 +1,117 @@
+.background-trending-items {
+    background-color: white;
+border: 1px solid black;
+border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 70vh;
+    align-items: center;
+    overflow: hidden;
+margin-top: 40vw;
+    position: absolute;
+  }
+  .cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+position: relative;
+border-radius: 20px;
+width: 100%;
+    height: 500px;
+    background-image:url('https://images.unsplash.com/photo-1610047614222-d33c39abfab2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30vw;
+}
+
+
+  
+  .image {
+    margin-top: 1vw;
+    border-radius: 20px;
+    width: 340px;
+    height: 500px;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  }
+  
+  .slider {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+    width: 340px;
+    height: 500px;/* Reduced height for better visibility */
+    
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .slider-track {
+    height: 500px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    width: calc(20vw * 20); /* Adjusted width for better spacing */
+    animation: Scroll 20s linear infinite;
+  }
+  
+  .slid {
+    border-radius: 20px;
+    width: 20vw; /* Adjusted width for better spacing */
+    height: 200vw; /* Reduced height for better visibility */
+    display: flex;
+  
+    align-items: center;
+    padding: 1.5vw;
+    perspective: 5vw;
+    margin: 1vw;
+  }
+
+  .heading{
+    width: 95%;
+z-index: 4;
+position: absolute;
+
+  }
+  
+  @keyframes Scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-15vw * 19); /* Adjusted translation for better scrolling */
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .image {
+       
+      width: 100%; /* Full width on smaller screens */
+      height: 100%; /* Auto height to maintain aspect ratio */
+      margin-left: 0; /* Reset margin for better alignment */
+    }
+    .background-trending-items {
+        height: 50vw;
+        width: 100%;
+    }
+    .slider-track {
+        height: 500px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: normal;
+        width: calc(20vw * 20); /* Adjusted width for better spacing */
+        animation: Scroll 20s linear infinite;
+      }
+  
+    .slid {
+      width: 30vw; /* Full width on smaller screens */
+      height: 50vw; /* Auto height to maintain aspect ratio */
+
+    }
+  }
+  

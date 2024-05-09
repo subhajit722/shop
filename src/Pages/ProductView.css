@@ -1,0 +1,195 @@
+.product-view {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+  }
+  
+  .imgbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+  
+  .mainimg {
+    width: 75%;
+    height: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to main image */
+    transition: transform 0.3s ease; /* Add transition for magnifying glass effect */
+  }
+  
+  .img1s {
+    width: 100%;
+    object-fit: cover;
+    height: 30vw;
+    border: 2px solid transparent; /* Add transparent border for transition */
+  }
+  
+  .smallimg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 18%;
+    background-color: #fff;
+    height: 30vw;
+  }
+  
+  .btnimg {
+    width: 50%;
+    height: 20%;
+    overflow: hidden;
+  }
+  
+  .imgs2 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent; /* Add transparent border for transition */
+    transition: border-color 0.3s ease; /* Add transition for border color change */
+  }
+  
+  img {
+    object-fit: contain;
+  }
+  
+  .product-desc {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    width: 50%; /* Adjust width as needed */
+  }
+  
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 500px) {
+    .product-view {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the start of the container */
+    }
+    
+    .imgbox {
+      width: 100%; /* Full width for image box */
+    }
+    
+    .mainimg {
+      width: 100%; /* Full width for main image */
+    }
+    
+    .smallimg {
+      width: 100%; /* Full width for small images */
+      height: auto; /* Auto height */
+    }
+    
+    .product-desc {
+      width: 100%; /* Full width for product description */
+    }
+  }
+  
+  /* Magnifying glass effect on main image */
+  .mainimg:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+  }
+  
+  /* Border color change on hover for small images */
+  .btnimg:hover .imgs2 {
+    border-color: #ccc; /* Change border color on hover */
+  }
+  
+
+
+
+
+
+
+
+
+
+  .related-products {
+    margin-top: 20px;
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .related-products h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .related-products-list {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snapping to each item */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+  }
+  
+  .related-product {
+    flex: 0 0 auto; /* Disable flex-grow and flex-shrink */
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .related-product:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .card-back {
+    background-color: #f0f0f0;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .related-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .related-product p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Additional styling for the slider */
+  .related-products-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  .related-products-list {
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  

@@ -1,0 +1,160 @@
+.background-trending-items {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+  
+    height: 70vh;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 40vw;
+    position: absolute;
+    padding: 1vw;
+  }
+  .cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    width:  100%;
+    height: 50vw;
+    background-image: url('../../asset/cover.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 30vw;
+
+  }
+  
+  
+  .image {
+    margin-top: 1vw;
+    border-radius: 20px;
+    width: 340px;
+    height: 450px;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  }
+  .slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Added gap between images */
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+  
+  }
+  .slider-track {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    width: calc(20vw * 20); /* Adjusted width for better spacing */
+    animation: Scroll 20s linear infinite;
+  }
+  .slid {
+    border-radius: 20px;
+    width: 20vw; /* Adjusted width for better spacing */
+    display: flex;
+    align-items: center;
+  height: 30vw;
+    padding: 1.5vw;
+    perspective: 5vw;
+    margin: 1vw;
+    overflow: hidden;
+  }
+
+
+  .changimg {
+    border-radius: 20px;
+    width: 20vw; /* Adjusted width for better spacing */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 20vw;
+    perspective: 5vw;
+    margin: 1vw;
+    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease; /* Added transition for smooth animation */
+  }
+  
+  .changimg:hover {
+    transform: translateY(-148%); /* Slide image out of view */
+    filter: brightness(0.7); /* Add a brightness effect when hovering */
+  }
+
+  .product-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    /* transition: transform 0.5s ease, opacity 0.5s ease; */
+  }
+
+ 
+ 
+  
+  .details {
+    text-align: center;
+  }
+  
+  .details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .details p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .heading{
+    width: 95%;
+    z-index: 1;
+    position: absolute;
+  }
+  @keyframes Scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-15vw * 19); 
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .image {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+    }
+    .background-trending-items {
+      height: 30vw;
+     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slider-track {
+      display: flex;
+      align-items: center;
+      justify-content: normal;
+      width: calc(20vw * 20); /* Adjusted width for better spacing */
+      animation: Scroll 20s linear infinite;
+    }
+    .slid {
+      width: 30vw; /* Full width on smaller screens */
+      height: 50vw; /* Auto height to maintain aspect ratio */
+    }
+  }
